@@ -1,3 +1,123 @@
+# TYAP App Presentation
+
+A lightweight React presentation/demo app showcasing the TYAP passenger and driver interfaces, payment system and biometric device components. This repository is intended as a UI demo and starting point for building the TYAP front-end experience.
+
+**Status:** Demo / Presentation — not a production-ready product.
+
+**Tech stack:** React, CRACO, Tailwind CSS, Lucide icons
+
+**Key files:**
+- `craco.config.js` : CRACO configuration (used instead of ejecting CRA)
+- `tailwind.config.js` : Tailwind CSS configuration
+- `public/` : Static assets and HTML entry
+- `src/` : React source files and components
+
+## Project overview
+
+This project contains a small React app that demonstrates the following UI pieces:
+- Passenger-facing app (`src/PassengerApp.jsx`)
+- Driver dashboard (`src/DriverDashboard.jsx`)
+- TYAP admin/dashboard (`src/TYAPDashboard.jsx`)
+- Payment system demo (`src/PaymentSystem.jsx`)
+- Biometric device component (`src/BiometricDevice.jsx`)
+
+The codebase is organized as a presentational demo — use it to prototype flows or extract components into a larger project.
+
+## Prerequisites
+- Node.js (recommended >= 16)
+- npm (or `pnpm`/`yarn`) — this README uses `npm` for examples.
+
+On Windows PowerShell, run the commands below from the project root.
+
+## Quick start (development)
+
+Install dependencies:
+
+```powershell
+npm install
+```
+
+Start the development server (CRACO is used to run CRA with custom config):
+
+```powershell
+npm start
+```
+
+Open http://localhost:3000 in your browser. The dev server supports hot reloading.
+
+## Available scripts
+Scripts are defined in `package.json` and use CRACO as the wrapper for CRA.
+
+- `npm start` : Start dev server (`craco start`)
+- `npm run build` : Create production build (`craco build`)
+- `npm test` : Run tests (`craco test`)
+- `npm run eject` : Eject CRA (one-way operation)
+
+Example build command (PowerShell):
+
+```powershell
+npm run build
+```
+
+## Tailwind CSS and CRACO
+This project uses Tailwind CSS for styling. CRACO is used so we don't need to eject CRA to customize PostCSS/Tailwind settings. See `craco.config.js` and `tailwind.config.js` for configuration.
+
+## Project structure
+
+Top-level layout (important files only):
+
+```
+public/
+  index.html
+src/
+  index.js
+  App.js
+  App.css
+  index.css
+  PassengerApp.jsx
+  DriverDashboard.jsx
+  TYAPDashboard.jsx
+  PaymentSystem.jsx
+  BiometricDevice.jsx
+  reportWebVitals.js
+  setupTests.js
+```
+
+## Component notes
+- `PassengerApp.jsx`: UI for passenger flows.
+- `DriverDashboard.jsx`: Driver controls and status views.
+- `TYAPDashboard.jsx`: Admin / overview dashboard.
+- `PaymentSystem.jsx`: Mock/demo payment UI and handling.
+- `BiometricDevice.jsx`: Example biometric interaction component.
+
+These files are intentionally simple and meant for demo/presentation. Feel free to refactor them into smaller components as you integrate into a larger app.
+
+## Contributing
+- Open an issue to discuss larger feature work.
+- For small fixes, open a pull request with a short description and screenshots if UI changes are involved.
+
+Guidelines:
+- Keep changes focused and well-tested.
+- If you add dependencies, include a short justification in the PR description.
+
+## Troubleshooting
+- If Tailwind styles don't appear, ensure `npm install` completed and the dev server was restarted after installing new packages.
+- If `craco` commands fail, reinstall node modules with `rm -r node_modules; npm install` (Windows PowerShell: `Remove-Item -Recurse node_modules; npm install`).
+
+## Next steps / suggestions
+- Add a `README` per-component in `src/components/` if components grow.
+- Add Storybook for interactive component demos.
+- Add CI scripts for linting, tests and a build pipeline.
+
+## License
+No license specified. Add a `LICENSE` file to declare a license for this repository.
+
+---
+
+If you'd like, I can also:
+- run the app locally and verify the dev server starts, or
+- add a short CONTRIBUTING.md and/or CODE_OF_CONDUCT.md.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
